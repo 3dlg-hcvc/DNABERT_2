@@ -246,9 +246,9 @@ def train():
     val_dataset = SupervisedDataset(tokenizer=tokenizer, 
                                      data_path=os.path.join(data_args.data_path, "dev.csv"), 
                                      kmer=data_args.kmer)
-    test_dataset = SupervisedDataset(tokenizer=tokenizer, 
-                                     data_path=os.path.join(data_args.data_path, "test.csv"), 
-                                     kmer=data_args.kmer)
+    # test_dataset = SupervisedDataset(tokenizer=tokenizer, 
+    #                                  data_path=os.path.join(data_args.data_path, "test.csv"), 
+    #                                  kmer=data_args.kmer)
     data_collator = DataCollatorForSupervisedDataset(tokenizer=tokenizer)
 
 
